@@ -2,14 +2,14 @@
 # Abhishek V Joshi
 # 2015A7PS0116P
 ##########################
-from GUI_init import *
-from Dirt_Generator import *
-from Path import *
-from BFS import *
-from IDS import *
-from Heuristic_1 import *
-from Heuristic_2 import *
-from Definitions_IDS import *
+from GUI.GUI_init import *
+from GUI.Dirt_Generator import *
+from GUI.Path import *
+from Uninformed_Search.BFS import *
+from Uninformed_Search.IDS import *
+from Informed_Search.Heuristic_1 import *
+from Informed_Search.Heuristic_2 import *
+from Uninformed_Search.Definitions_IDS import *
 import sys
 from time import time
 import turtle
@@ -224,7 +224,7 @@ def main():
 	# G4
 	time_list = []
 	for i in range(10, 105, 5):
-		dirt_list = generate_dirt(i, init_t, screen, coordinates_1, width, height, 10, draw = False)
+		dirt_list = generate_dirt(i, init_t, screen, coordinates_1, width, height, 10)# draw = False)
 		goal_state = State([0,0], [])
 		root_state = State([0,0], dirt_list)
 		t0 = time()
