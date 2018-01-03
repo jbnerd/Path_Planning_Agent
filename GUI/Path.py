@@ -4,7 +4,7 @@
 ##########################
 
 from turtle import *
-from Dirt_Generator import *
+from .Dirt_Generator import *
 
 def trace_path(action_list, coordinates, width, height, half = False, default = 2):
 

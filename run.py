@@ -122,19 +122,19 @@ def main():
 	sum_cost = 0
 	for i in range(10):
 		dirt_list_1 = generate_dirt(100, init_t, screen, coordinates_1, width, height, 3, draw = False)
-	 	goal_state = State([0,0], [])
-	 	root_state1 = State([0,0], dirt_list_1)
-	 	temp = ids(root_state1, goal_state, 3)
-	 	sum_cost += temp[0][1]
+		goal_state = State([0,0], [])
+		root_state1 = State([0,0], dirt_list_1)
+		temp = ids(root_state1, goal_state, 3)
+		sum_cost += temp[0][1]
 	avg_cost1 = float(sum_cost)/10
 
 	sum_cost = 0
 	for i in range(10):
-	 	dirt_list_2 = generate_dirt(100, init_t, screen, coordinates_2, width, height, 3, draw = False)
-	 	goal_state = State([0,0], [])
-	 	root_state2 = State([0,0], dirt_list_2)
-	 	temp = gbs1(root_state2, goal_state, 3)
-	 	sum_cost += temp[0][1]
+		dirt_list_2 = generate_dirt(100, init_t, screen, coordinates_2, width, height, 3, draw = False)
+		goal_state = State([0,0], [])
+		root_state2 = State([0,0], dirt_list_2)
+		temp = gbs1(root_state2, goal_state, 3)
+		sum_cost += temp[0][1]
 	avg_cost2 = float(sum_cost)/10
 		
 
@@ -150,19 +150,19 @@ def main():
 
 	# Computing times.
 	for mat_size in range(3, 15):
-	 	dirt_list = generate_dirt(30, init_t, screen, coordinates_1, width, height, mat_size, False)
-	 	goal_state = State([0,0], [])
-	 	root_state = State([0,0], dirt_list)
+		dirt_list = generate_dirt(30, init_t, screen, coordinates_1, width, height, mat_size, False)
+		goal_state = State([0,0], [])
+		root_state = State([0,0], dirt_list)
 		
-	 	t0 = time()
-	 	temp = gbs1(root_state, goal_state, mat_size)
-	 	t1 = round(time() - t0, 4)
-	 	time_h1.append(t1)
+		t0 = time()
+		temp = gbs1(root_state, goal_state, mat_size)
+		t1 = round(time() - t0, 4)
+		time_h1.append(t1)
 
-	 	t2 = time()
-	 	temp = gbs2(root_state, goal_state, mat_size)
-	 	t3 = round(time() - t2, 4)
-	 	time_h2.append(t3)
+		t2 = time()
+		temp = gbs2(root_state, goal_state, mat_size)
+		t3 = round(time() - t2, 4)
+		time_h2.append(t3)
 
 		print("Check: ", mat_size, t1, t3)
 

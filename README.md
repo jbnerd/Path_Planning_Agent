@@ -44,6 +44,10 @@
 - The Problem is implemented using `Python2.7.13` using the Standard Internal Libraries.
 - Some Linux Machines may not come with `Python-tk` pre-installed. This implementation uses `Turtle` Graphics, which internally uses `Python-tk`.
 
+## Screenshot
+
+![alt text](https://github.com/jbnerd/Path_Planning_Agent/blob/master/Screenshot.png)
+
 ## Modules
 
 - Dirt Generator:
